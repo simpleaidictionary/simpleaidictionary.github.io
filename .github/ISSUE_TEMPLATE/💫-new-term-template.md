@@ -1,11 +1,10 @@
 ---
 name: "\U0001F4AB New Term Template"
 about: Use this template to propose the addition of a new term
-title: 'New Term: ...'
+title: "New Term: ..."
 labels: enhancement
-assignees: ''
+assignees: ""
 type: Feature
-
 ---
 
 **Term Name**: ...
@@ -16,17 +15,17 @@ type: Feature
 
 ---
 
-**General Definition**: 
+**General Definition**:
 
 **Software Definition**:
 
 ---
 
-**Example sentence, with citation (no URL links)**:  
+**Example sentence, with citation (no URL links)**:
 
 ---
 
-**Why this term deserves a simple definition**: 
+**Why this term deserves a simple definition**:
 
 ---
 
