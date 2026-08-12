@@ -1,6 +1,6 @@
 import { CardContent } from "@/components/ui/card";
 import { diagram, fieldDefinition } from "@/lib/terms";
-import { Example } from "@/components/definition_card/base/example";
+import { DefinitionExample } from "@/components/definition_card/definition_example";
 
 export function DefinitionContent({
   definition,
@@ -14,7 +14,7 @@ export function DefinitionContent({
   return (
     <CardContent className="text-sm text-muted-foreground flex gap-2 flex-col text-center @md:text-left md:justify-start justify-center">
       <p className="text-black">{definition}</p>
-      <Example example={example} />
+      <DefinitionExample example={example} />
     </CardContent>
   );
 }

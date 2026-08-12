@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export function Example({
+export function DefinitionExample({
   className,
   example,
   ...props

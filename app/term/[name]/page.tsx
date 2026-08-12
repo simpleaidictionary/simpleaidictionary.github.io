@@ -1,4 +1,4 @@
-import { TermDefinition } from "@/components/definition_card/term_definition";
+import { CardTabber } from "@/components/definition_card/card_tabber";
 import { terms } from "@/lib/terms";
 
 export function generateStaticParams() {
@@ -16,7 +16,7 @@ export default async function TabsDemo({
 
   return (
     <>
-      <TermDefinition term={name} />
+      <CardTabber term={name} />
     </>
   );
 }

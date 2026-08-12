@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { terms } from "@/lib/terms";
 import { term_of_the_day } from "@/lib/term_of_the_day";
-import { SimpleCard } from "@/components/definition_card/simple_card";
+import { DefinitionCard } from "@/components/definition_card/definition_card";
 import { Card } from "@/components/ui/card";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
             Today&apos;s &nbsp;
             <span>Buzzword</span>
           </h1>
-          <SimpleCard term={term_of_the_day} termType="simple" />
+          <DefinitionCard term={term_of_the_day} termType="simple" />
         </article>
         <article className="min-w-fit flex items-center flex-col">
           <h1 className="text-center px-4 text-2xl text-primary mb-2 font-playfair-display">

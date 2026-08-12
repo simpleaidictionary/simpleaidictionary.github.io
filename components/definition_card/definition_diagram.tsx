@@ -1,10 +1,10 @@
 import { diagram } from "@/lib/terms";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { MermaidClient } from "@/components/MermaidClient";
+import { MermaidClient } from "@/components/definition_card/MermaidClient";
 import { readFileSync } from "fs";
 
-export function DiagramImage({
+export function DefinitionDiagram({
   diagram,
   className,
   ...props

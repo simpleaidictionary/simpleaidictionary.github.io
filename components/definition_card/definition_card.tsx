@@ -1,11 +1,11 @@
 import { getTermObj } from "@/lib/terms";
-import { BaseDefinitionCard } from "@/components/definition_card/base/base_definition_card";
-import { DefintionHeader } from "./base/defintion_header";
-import { DefinitionContent } from "./base/definition_content";
-import { DiagramImage } from "./base/diagram_image";
+import { BaseCard } from "@/components/definition_card/base_card";
+import { DefintionHeader } from "./defintion_header";
+import { DefinitionContent } from "./definition_content";
+import { DefinitionDiagram } from "./definition_diagram";
 import clsx from "clsx";
 
-export function SimpleCard({
+export function DefinitionCard({
   term,
   termType,
 }: {
@@ -20,7 +20,7 @@ export function SimpleCard({
     termTypeObj = retrieved_term.software;
   }
   return (
-    <BaseDefinitionCard>
+    <BaseCard>
       <div className="flex flex-col @md:flex-row items-center">
         <div
           className={clsx({ "@md:w-6/10": termTypeObj.diagram !== undefined })}
@@ -36,12 +36,12 @@ export function SimpleCard({
           />
         </div>
         {termTypeObj.diagram !== undefined && (
-          <DiagramImage
+          <DefinitionDiagram
             className="mt-5 @md:mt-0 @md:w-4/10"
             diagram={termTypeObj.diagram}
           />
         )}
       </div>
-    </BaseDefinitionCard>
+    </BaseCard>
   );
 }
