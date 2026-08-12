@@ -14,8 +14,8 @@ export function DefinitionCard({
 }) {
   const retrieved_term = getTermObj(term);
   let termTypeObj = null;
-  if (termType == "simple") {
-    termTypeObj = retrieved_term.simple;
+  if (termType == "general") {
+    termTypeObj = retrieved_term.general;
   } else {
     termTypeObj = retrieved_term.software;
   }

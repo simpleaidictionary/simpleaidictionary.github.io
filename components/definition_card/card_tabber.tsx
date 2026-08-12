@@ -6,12 +6,12 @@ export function CardTabber({ term }: { term: string }) {
     <Tabs defaultValue="overview" className="mt-8">
       <div className="flex md:justify-start justify-center ">
         <TabsList>
-          <TabsTrigger value="simple">Simple</TabsTrigger>
+          <TabsTrigger value="general">General</TabsTrigger>
           <TabsTrigger value="software">Software</TabsTrigger>
         </TabsList>
       </div>
-      <TabsContent value="simple">
-        <DefinitionCard term={term} termType="simple" />
+      <TabsContent value="general">
+        <DefinitionCard term={term} termType="general" />
       </TabsContent>
       <TabsContent value="software">
         <DefinitionCard term={term} termType="software" />

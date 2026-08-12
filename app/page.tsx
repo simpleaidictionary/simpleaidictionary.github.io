@@ -13,7 +13,7 @@ export default function Home() {
             Today&apos;s &nbsp;
             <span>Buzzword</span>
           </h1>
-          <DefinitionCard term={term_of_the_day} termType="simple" />
+          <DefinitionCard term={term_of_the_day} termType="general" />
         </article>
         <article className="min-w-fit flex items-center flex-col">
           <h1 className="text-center px-4 text-2xl text-primary mb-2 font-playfair-display">

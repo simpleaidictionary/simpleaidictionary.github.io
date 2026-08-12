@@ -13,7 +13,7 @@ export interface diagram {
 export interface term {
   name: string;
   related_terms: Array<string>;
-  simple: fieldDefinition;
+  general: fieldDefinition;
   software: fieldDefinition;
 }
 
@@ -28,15 +28,15 @@ Important parts of a dictionary:
 const agent: term = {
   name: "agent",
   related_terms: ["agents", "agentic"],
-  simple: {
+  general: {
     type: "Software Pattern",
     definition:
       "An AI-model that uses additional, external data to generate a response.",
     example:
       "An agent can tackle certain tasks with you or for you, from acting as a virtual project manager to handling more complex assignments like reconciling financial statements to close the books (Susanna Ray, Microsoft, 2024).",
     diagram: {
-      src: "/mermaid_diagrams/agent_simple",
-      alt: "Simple drawing of agent requesting and receiving data, before responding to user.",
+      src: "/mermaid_diagrams/agent_general",
+      alt: "general drawing of agent requesting and receiving data, before responding to user.",
     },
   },
   software: {
@@ -51,7 +51,7 @@ const agent: term = {
 const agi: term = {
   name: "AGI",
   related_terms: ["Artificial General Intelligence"],
-  simple: {
+  general: {
     type: "Status",
     definition: "Refers to AI systems that think and reason like human beings.",
     example:
@@ -69,7 +69,7 @@ const agi: term = {
 const fine_tune: term = {
   name: "fine-tune",
   related_terms: ["fine-tuning", "fine-tuned"],
-  simple: {
+  general: {
     type: "Specialization Strategy",
     definition:
       "Using specialized data to help make an AI-model perform better at particular tasks.",
@@ -87,7 +87,7 @@ const fine_tune: term = {
 const multi_agent: term = {
   name: "multi-agent",
   related_terms: ["multi-agent system"],
-  simple: {
+  general: {
     type: "Software Pattern",
     definition: "Connecting multiple agents together to accomplish a goal.",
     example:
@@ -105,7 +105,7 @@ const multi_agent: term = {
 const hallucinate: term = {
   name: "hallucinate",
   related_terms: ["hallucination"],
-  simple: {
+  general: {
     type: "Behaviour",
     definition:
       "When an AI model generates false facts, especially ones that less obvious.",
