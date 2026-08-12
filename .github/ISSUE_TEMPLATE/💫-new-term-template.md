@@ -1,5 +1,5 @@
 ---
-name: New Term Template
+name: "\U0001F4AB New Term Template"
 about: Use this template to propose the addition of a new term
 title: 'New Term: ...'
 labels: enhancement
