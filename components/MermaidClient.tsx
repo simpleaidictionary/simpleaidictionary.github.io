@@ -13,7 +13,11 @@ export function MermaidClient({
     mermaid.run();
   }, []);
   return (
-    <pre className={cn(["mermaid", className])} {...props}>
+    <pre
+      suppressHydrationWarning
+      className={cn(["mermaid", className])}
+      {...props}
+    >
       {diagramSrcCode}
     </pre>
   );
