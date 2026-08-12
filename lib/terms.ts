@@ -35,7 +35,7 @@ const agent: term = {
     example:
       "An agent can tackle certain tasks with you or for you, from acting as a virtual project manager to handling more complex assignments like reconciling financial statements to close the books (Susanna Ray, Microsoft, 2024).",
     diagram: {
-      src: "/mermaid_diagrams/agent_general",
+      src: "agent_general",
       alt: "general drawing of agent requesting and receiving data, before responding to user.",
     },
   },

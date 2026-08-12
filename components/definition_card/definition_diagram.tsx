@@ -14,7 +14,7 @@ export function DefinitionDiagram({
     diagramImage = (
       <MermaidClient
         diagramSrcCode={readFileSync(
-          process.cwd() + "/public" + diagram.src + ".mmd",
+          process.cwd() + "/public/mermaid_diagrams/" + diagram.src + ".mmd",
           "utf-8"
         )}
       />
@@ -23,7 +23,7 @@ export function DefinitionDiagram({
     diagramImage = (
       <Image
         {...props}
-        src={`${process.env.NEXT_PUBLIC_BASEPATH}${diagram.src}.svg`}
+        src={`${process.env.NEXT_PUBLIC_BASEPATH}/mermaid_diagrams/${diagram.src}.svg`}
         alt={diagram.alt}
         width="100"
         height="100"
