@@ -1,5 +1,5 @@
 import { CardContent } from "@/components/ui/card";
-import { diagram, fieldDefinition } from "@/lib/terms";
+import { diagram, definition_field } from "@/lib/terms";
 import { DefinitionExample } from "@/components/definition_card/definition_example";
 
 export function DefinitionContent({
@@ -7,8 +7,8 @@ export function DefinitionContent({
   example,
 }: {
   children?: Readonly<React.ReactNode>;
-  definition: fieldDefinition["definition"];
-  example: fieldDefinition["example"];
+  definition: definition_field["definition"];
+  example: definition_field["example"];
   diagram?: diagram;
 }) {
   return (

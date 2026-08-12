@@ -1,5 +1,5 @@
 import { CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import type { term, fieldDefinition } from "@/lib/terms";
+import type { term, definition_field } from "@/lib/terms";
 import Link from "next/link";
 
 export function DefintionHeader({
@@ -8,7 +8,7 @@ export function DefintionHeader({
   related_terms,
 }: {
   name: term["name"];
-  type: fieldDefinition["type"];
+  type: definition_field["type"];
   related_terms: term["related_terms"];
 }) {
   return (
