@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { terms } from "@/lib/terms";
-import { term_of_the_day } from "@/lib/term-of-the-day";
+import { term_of_the_day } from "@/lib/term_of_the_day";
 import { SimpleCard } from "@/components/definition_card/simple_card";
 import { Card } from "@/components/ui/card";
 
