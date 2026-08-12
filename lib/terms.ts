@@ -1,4 +1,4 @@
-export interface fieldDefinition {
+export interface definition_field {
   type: string;
   definition: string;
   example: string;
@@ -13,8 +13,8 @@ export interface diagram {
 export interface term {
   name: string;
   related_terms: Array<string>;
-  general: fieldDefinition;
-  software: fieldDefinition;
+  general: definition_field;
+  software: definition_field;
 }
 
 /*
