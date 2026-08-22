@@ -8,7 +8,7 @@ export default function About() {
       <ProseH1 className="text-left">Why the Dictionary?</ProseH1>
       <ProseP className="text-left">
         GenAI is a liminal space. It&apos;s changing rapidly. As a result, new
-        terms are being added continiously.
+        terms are continuously being added.
       </ProseP>
       <ProseH2>The Problem</ProseH2>
       <ProseP>
@@ -20,21 +20,16 @@ export default function About() {
       <ProseP className="italic">What is an AI agent?</ProseP>
       <ProseP>
         When we use the term &apos;agent&apos;, we typically refer to apps like
-        customer-service chatbots or coding agent.
+        customer service chat-bots or coding agents.
       </ProseP>
       <ProseP>
-        IBM defines it as: &apos;a system that autonomously performs tasks by
-        designing workflows with available tools.&apos;
-      </ProseP>
-      <ProseP>
-        When we use the term &apos;agent&apos;, we typically refer to apps like
-        customer-service chatbots or coding agent. The issues with this
-        definition are:
+        IBM defines it as: &quot;a system that autonomously performs tasks by
+        designing workflows with available tools.&quot;
       </ProseP>
       <ProseUL>
         <li>
-          The word &apos;system&apos; is too generic. Agents usually refer to an
-          app.{" "}
+          The word &quot;system&quot; is too generic. Agents usually refer to an
+          app.
         </li>
         <li>
           Agents are not always autonomous; human-in-the-loop and user-feedback
@@ -47,10 +42,10 @@ export default function About() {
           developer-designed workflow.
         </li>
         <li>
-          The pharse &apos;with available tools&apos; is too technical relative
+          The phrase &quot;with available tools&quot; is too technical relative
           to the rest of the definition. Someone who doesn&apos;t know what an
-          &apos;agent&apos; is will probably not understand that
-          &apos;tools&apos; refers to programming functions that provide
+          &quot;agent&quot; is will probably not understand that
+          &quot;tools&quot; refers to programming functions that provide
           additional context or computations.
         </li>
       </ProseUL>
@@ -63,21 +58,31 @@ export default function About() {
       </ProseP>
       <ProseOL>
         <li>
-          Provide a &apos;term type&apos; for each term. Similar to word types
-          in traditional dictionaries, &apos;term type&apos; will describe what
-          the term refers to. Examples include: architecture, document format,
-          protocol, and behaviour.
+          Provide a &quot;term type&quot; for each term. Similar to word types
+          in traditional dictionaries, a &quot;term type&quot; will describe
+          what the term refers to. Examples include: architecture, document
+          format, protocol, and behavior.
         </li>
         <li>
-          Provide &apos;related terms&apos; for each term. This is also similar
+          Provide &quot;related terms&quot; for each term. This is also similar
           to conjugations/derivations in traditional dictionaries, and it helps
           route users to the root term. For example, some of the related terms
-          to &apos;agent&apos; are agents and agentic.
+          to &quot;agent&quot; are agents and agentic.
         </li>
         <li>
-          A simple, concrete definition that defines terms as they&apos;re
+          A simple set of definitions that defines terms as they&apos;re
           commonly used. To do so, the dictionary will provide users with
           different definitions depending on their background.
+        </li>
+        <li>
+          A diagram! A picture is worth a thousand words, and this dictionary is
+          planning on using diagrams to convey the various elements associated
+          with a term.
+        </li>
+        <li>
+          Finally, there should be informative examples of the term currently in
+          use. This helps ground the definition in further context and improve
+          the dictionary&apos;s authority in defining AI buzzwords.
         </li>
       </ProseOL>
       <ProseH3>Laying out the Definitions</ProseH3>
@@ -86,23 +91,18 @@ export default function About() {
       </ProseP>
       <ProseUL>
         <li>
-          First, there will be a general defintion that should be understood by
-          the average professional.
+          First, there should be a general definition that is understood by the
+          average professional. It should be as independent as possible, without
+          relying on further buzzwords. This definition is the core artifact of
+          The Simple AI Dictionary, so it&apos;s meant to be very accessible.
         </li>
         <li>
-          Furthermore, there should also be an &apos;original&apos; definition,
-          as in a definition that is similar to how the term is popularly
-          defined. In the aforementioned example, that would be the IBM
-          definition.
-        </li>
-        <li>
-          There should also be a software definition that should be understood
-          by the average software developer.
-        </li>
-        <li>
-          A diagram! A picture is worth a thousand words, and this dictionary is
-          planning on using diagrams to convey the various elements associated
-          with a term.
+          There should also be a software definition that is understood by the
+          average technical professional. This definition can rely on other
+          buzzwords, as it&apos;s meant for professionals with existing
+          familiarity of the GenAI space. It should also follow the general
+          definition as closely as possible, functioning as the &quot;level
+          2&quot; in terms of technical jargon.
         </li>
       </ProseUL>
     </div>
