@@ -60,7 +60,7 @@ const agi: term = {
   software: {
     type: "Intelligence Type",
     definition:
-      "AI systems that mirror how humans reason, with abilities like the transfer of knowledge across domains and the ability to use common sense logic.",
+      "AI systems that mirror how humans reason using abilities like knowledge transfer and common sense logic.",
     example:
       "AGI systems conceivably could handle novel situations, not just perform well on a single, narrow task (Stanford HAI, n.d.).",
   },
@@ -72,7 +72,7 @@ const fine_tune: term = {
   general: {
     type: "Specialization Strategy",
     definition:
-      "Using specialized data to help make an AI-model perform better at particular tasks.",
+      "Using specialized data to improve an AI-model's performance at particular tasks.",
     example:
       "Fine-tuning connects the intelligence in general-purpose LLMs to enterprise data, enabling organizations to adapt generative AI (GenAI) models to their unique business needs with higher degrees of specificity and relevance (Databricks Staff, n.d.).",
   },
@@ -96,7 +96,7 @@ const multi_agent: term = {
   software: {
     type: "Architecture",
     definition:
-      "A flow composed of multiple agents, where each agent completes a specialized task, to collectively complete a goal.",
+      "A flow composed of multiple agents, where each agent completes a specialized task, that collectively complete a goal.",
     example:
       "Multi-agent patterns are particularly valuable when a single agent has too many tools and makes poor decisions about which to use, when tasks require specialized knowledge with extensive context (long prompts and domain-specific tools), or when you need to enforce sequential constraints that unlock capabilities only after certain conditions are met (Langchain, n.d.).",
   },
@@ -108,14 +108,14 @@ const hallucinate: term = {
   general: {
     type: "Behaviour",
     definition:
-      "When an AI model generates false facts, especially ones that less obvious.",
+      "When an AI model generates false facts, especially ones that are less obvious.",
     example:
       'Consider the prompt: "What is Adam Tauman Kalai\'s birthday? If you know, just respond with DD-MM." On three separate attempts, a state-of-the-art open-source language model output three incorrect dates: “03-07”, “15-06”, and “01-01”, even though a response was requested only if known (Kalai et al., OpenAI, 2025).',
   },
   software: {
     type: "Behaviour",
     definition:
-      "When an LLM generates inaccurate statements, or makes up data where it doesn't exist.",
+      "When an LLM generates inaccurate statements or makes up data where it doesn't exist.",
     example:
       "Hallucinations undermine the reliability and trustworthiness of LLMs, especially in domains requiring factual accuracy (Alansari and Luqman, arxiv, 2025).",
   },
