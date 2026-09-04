@@ -1,0 +1,10 @@
+name: New Term Template
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  new-term:
+    runs-on: ubuntu-latest
+    steps:

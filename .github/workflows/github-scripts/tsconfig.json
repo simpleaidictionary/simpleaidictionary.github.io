@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "module": "nodenext",
+    "target": "es2025",
+  },
+  "include": ["*.ts"]
+}
