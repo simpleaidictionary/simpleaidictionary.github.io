@@ -13,18 +13,18 @@ jobs:
       - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
-      - run: echo "::debug::${{github.event.label}}"
-      - if: ${{github.event.issue.labels.name == 'term approved'}}
+      - run: echo "::debug::${{github.event.label.name}}"
+      - if: ${{github.event.label.name == 'term approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/term-approved.md"
         env:
           ISSUE_URL: ${{github.event.issue.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - if: ${{github.event.issue.labels.name == 'general approved'}}
+      - if: ${{github.event.label.name == 'general approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/general-approved.md"
         env:
           ISSUE_URL: ${{github.event.issue.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - if: ${{github.event.issue.labels.name == 'software approved'}}
+      - if: ${{github.event.label.name == 'software approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/software-approved.md"
         env:
           ISSUE_URL: ${{github.event.issue.html_url}}
