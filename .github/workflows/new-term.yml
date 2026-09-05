@@ -16,12 +16,12 @@ jobs:
       - if: ${{github.event.issue.labels.name == 'term approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/term-approved.md"
         env:
-          ISSUE_URL: ${{github.event.issue.url}}
+          ISSUE_URL: ${{github.event.issue.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - if: ${{github.event.issue.labels.name == 'general approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/general-approved.md"
         env:
-          ISSUE_URL: ${{github.event.issue.url}}
+          ISSUE_URL: ${{github.event.issue.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - if: ${{github.event.issue.labels.name == 'software approved'}}
         run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/software-approved.md"
