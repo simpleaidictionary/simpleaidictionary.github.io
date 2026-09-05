@@ -4,9 +4,14 @@ on:
     types:
       - labeled
 
+permissions:
+  contents: read
+
 jobs:
   new-term:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     env:
       COMMENTS_PATH: .github/issue-comment-templates
     steps:
