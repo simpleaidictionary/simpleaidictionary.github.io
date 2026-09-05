@@ -1,0 +1,30 @@
+name: New Term Issue Flow
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  new-term:
+    runs-on: ubuntu-latest
+    env:
+      COMMENTS_PATH: .github/issue-comment-templates
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - if: ${{github.event.issue.labels.name == 'term approved'}}
+        run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/term-approved.md"
+        env:
+          ISSUE_URL: ${{github.event.issue.url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - if: ${{github.event.issue.labels.name == 'general approved'}}
+        run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/general-approved.md"
+        env:
+          ISSUE_URL: ${{github.event.issue.url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - if: ${{github.event.issue.labels.name == 'software approved'}}
+        run: gh issue comment "$ISSUE_URL" -F "${COMMENTS_PATH}/software-approved.md"
+        env:
+          ISSUE_URL: ${{github.event.issue.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
