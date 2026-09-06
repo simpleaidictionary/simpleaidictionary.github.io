@@ -1,7 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DefinitionCard } from "@/components/definition_card/definition_card";
+import { OutputTerm } from "@/lib/terms";
 
-export function CardTabber({ term }: { term: string }) {
+export function CardTabber({ outputTerm }: { outputTerm: OutputTerm }) {
   return (
     <Tabs defaultValue="overview" className="mt-8">
       <div className="flex md:justify-start justify-center ">
@@ -11,10 +12,10 @@ export function CardTabber({ term }: { term: string }) {
         </TabsList>
       </div>
       <TabsContent value="general">
-        <DefinitionCard term={term} termType="general" />
+        <DefinitionCard outputTerm={outputTerm} termType="general" />
       </TabsContent>
       <TabsContent value="software">
-        <DefinitionCard term={term} termType="software" />
+        <DefinitionCard outputTerm={outputTerm} termType="software" />
       </TabsContent>
     </Tabs>
   );

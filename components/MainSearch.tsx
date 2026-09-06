@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { terms } from "@/lib/terms";
+import { getOutputTerms } from "@/lib/terms";
 import {
   Combobox,
   ComboboxContent,
@@ -17,10 +17,10 @@ export function MainSearch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputValue, setInputValue] = useState<string | undefined>("");
   const expandedTerms = [];
-  for (const term of terms) {
-    expandedTerms.push({ name: term.name, url: term.name });
-    for (const related of term.related_terms) {
-      expandedTerms.push({ name: related, url: term.name });
+  for (const outputTerm of getOutputTerms()) {
+    expandedTerms.push({ name: outputTerm.name, url: outputTerm.url });
+    for (const related of outputTerm.related_terms) {
+      expandedTerms.push({ name: related, url: outputTerm.url });
     }
   }
   return (

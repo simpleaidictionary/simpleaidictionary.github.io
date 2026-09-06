@@ -1,4 +1,4 @@
-import { diagram } from "@/lib/terms";
+import { Diagram } from "@/lib/terms";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { MermaidClient } from "@/components/definition_card/MermaidClient";
@@ -8,7 +8,7 @@ export function DefinitionDiagram({
   diagram,
   className,
   ...props
-}: { diagram: diagram } & React.ComponentProps<"img">) {
+}: { diagram: Diagram } & React.ComponentProps<"img">) {
   let diagramImage;
   if (process.env.NODE_ENV == "development") {
     diagramImage = (

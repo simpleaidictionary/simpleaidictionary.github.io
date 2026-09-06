@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { terms } from "@/lib/terms";
+import { getOutputTerms } from "@/lib/terms";
 import { term_of_the_day } from "@/lib/term_of_the_day";
 import { DefinitionCard } from "@/components/definition_card/definition_card";
 import { Card } from "@/components/ui/card";
@@ -13,7 +13,12 @@ export default function Home() {
             Today&apos;s &nbsp;
             <span>Buzzword</span>
           </h1>
-          <DefinitionCard term={term_of_the_day} termType="general" />
+          <DefinitionCard
+            outputTerm={getOutputTerms().find(
+              (term) => term.name === term_of_the_day
+            )!}
+            termType="general"
+          />
         </article>
         <article className="min-w-fit flex items-center flex-col">
           <h1 className="text-center px-4 text-2xl text-primary mb-2 font-playfair-display">
@@ -21,16 +26,18 @@ export default function Home() {
           </h1>
           <Card className="border border-border p-4 bg-secondary px-5 basis-48 overflow-scroll">
             <ul className="list-none grid grid-cols-2 grid-flow-row px-2 gap-2 gap-x-8 ">
-              {terms.slice(0, 12).map((term) => (
-                <li className="text-center" key={term.name}>
-                  <Link
-                    className="capitalize text-primary  hover:underline decoration-2 "
-                    href={`/term/${term.name}`}
-                  >
-                    {term.name}
-                  </Link>
-                </li>
-              ))}
+              {getOutputTerms()
+                .slice(0, 12)
+                .map((term) => (
+                  <li className="text-center" key={term.name}>
+                    <Link
+                      className="capitalize text-primary  hover:underline decoration-2 "
+                      href={`/term/${term.url}`}
+                    >
+                      {term.name}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </Card>
         </article>

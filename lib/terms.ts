@@ -1,20 +1,26 @@
-export interface definition_field {
+export interface DefinitionField {
   type: string;
   definition: string;
   example: string;
-  diagram?: diagram;
+  diagram?: Diagram;
 }
 
-export interface diagram {
+export interface Diagram {
   src: string;
   alt: string;
 }
 
-export interface term {
+export interface InputTerm {
   name: string;
   related_terms: Array<string>;
-  general: definition_field;
-  software: definition_field;
+  general: DefinitionField;
+  software: DefinitionField;
+}
+
+export type TermType = "general" | "software";
+
+export interface OutputTerm extends InputTerm {
+  url: string;
 }
 
 /*
@@ -25,7 +31,7 @@ Important parts of a dictionary:
 - small example
 */
 
-const agent: term = {
+const agent: InputTerm = {
   name: "agent",
   related_terms: ["agents", "agentic"],
   general: {
@@ -48,7 +54,7 @@ const agent: term = {
   },
 };
 
-const agi: term = {
+const agi: InputTerm = {
   name: "AGI",
   related_terms: ["Artificial General Intelligence"],
   general: {
@@ -66,7 +72,7 @@ const agi: term = {
   },
 };
 
-const fine_tune: term = {
+const fine_tune: InputTerm = {
   name: "fine-tune",
   related_terms: ["fine-tuning", "fine-tuned"],
   general: {
@@ -84,7 +90,7 @@ const fine_tune: term = {
   },
 };
 
-const multi_agent: term = {
+const multi_agent: InputTerm = {
   name: "multi-agent",
   related_terms: ["multi-agent system"],
   general: {
@@ -102,7 +108,7 @@ const multi_agent: term = {
   },
 };
 
-const hallucinate: term = {
+const hallucinate: InputTerm = {
   name: "hallucinate",
   related_terms: ["hallucination"],
   general: {
@@ -121,13 +127,21 @@ const hallucinate: term = {
   },
 };
 
-export const terms: Array<term> = [
+const inputTerms: InputTerm[] = [
   agent,
   agi,
   fine_tune,
   multi_agent,
   hallucinate,
 ];
-export function getTermObj(selected_term: string) {
-  return terms.filter((term) => term.name === selected_term)[0];
+
+const outputTerms: OutputTerm[] = [];
+
+for (const inputTerm of inputTerms) {
+  outputTerms.push({ ...inputTerm, url: encodeURIComponent(inputTerm.name) });
 }
+
+export const getOutputTerms = () => outputTerms;
+
+export const getOutputTerm = (url: string) =>
+  outputTerms.find((outputTerm) => outputTerm.url === url);
