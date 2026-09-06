@@ -1,26 +1,29 @@
 import { CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import type { term, definition_field } from "@/lib/terms";
+import type { OutputTerm, TermType } from "@/lib/terms";
 import Link from "next/link";
 
 export function DefintionHeader({
-  name,
-  type,
-  related_terms,
+  outputTerm,
+  termType,
 }: {
-  name: term["name"];
-  type: definition_field["type"];
-  related_terms: term["related_terms"];
+  outputTerm: OutputTerm;
+  termType: TermType;
 }) {
   return (
     <CardHeader className="mbe-6 gap-0 justify-center text-center @md:text-left @md:justify-start">
       <CardTitle className="capitalize">
-        <Link className="hover:underline decoration-2" href={`/term/${name}`}>
-          {name}
+        <Link
+          className="hover:underline decoration-2"
+          href={`/term/${outputTerm.url}`}
+        >
+          {outputTerm.name}
         </Link>
-        <span className="ms-1 text-muted-foreground font-normal">- {type}</span>
+        <span className="ms-1 text-muted-foreground font-normal">
+          - {termType}
+        </span>
       </CardTitle>
       <CardDescription className="capitalize">
-        Related: {related_terms.join(", ")}
+        Related: {outputTerm.related_terms.join(", ")}
       </CardDescription>
     </CardHeader>
   );
