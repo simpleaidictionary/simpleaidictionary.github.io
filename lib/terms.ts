@@ -127,12 +127,30 @@ const hallucinate: InputTerm = {
   },
 };
 
+const vibe_code: InputTerm = {
+  name: "vibe code",
+  related_terms: ["vibe coding", "vibe coded"],
+  general: {
+    type: "Coding Method",
+    definition:
+      "Using AI to generate most or all of the code for a piece of software.",
+    example: `There's a new kind of coding I call "vibe coding", where you fully give in to the vibes, embrace exponentials, and forget that the code even exists (Karpathy, X, 2025).`,
+  },
+  software: {
+    type: "Coding Method",
+    definition:
+      "Generating most or all of your codebase by prompting AI tools.",
+    example: `Types of vibe coding tools include simple AI code completion assistants that respond directly to prompts, and advanced that can iterate on code on their own to reach a predetermined goal (n.a, GitHub, 2026).`,
+  },
+};
+
 const inputTerms: InputTerm[] = [
   agent,
   agi,
   fine_tune,
   multi_agent,
   hallucinate,
+  vibe_code,
 ];
 
 const outputTerms: OutputTerm[] = [];
