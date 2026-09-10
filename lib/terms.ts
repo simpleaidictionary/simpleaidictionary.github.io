@@ -156,7 +156,17 @@ const inputTerms: InputTerm[] = [
 const outputTerms: OutputTerm[] = [];
 
 for (const inputTerm of inputTerms) {
-  outputTerms.push({ ...inputTerm, url: encodeURIComponent(inputTerm.name) });
+  /*uri is encoded only in dev mode b/c of a nextjs bug around
+  how nextjs encodes URI parameters in DEV vs prod. see the 
+  following issue for more info: https://github.com/vercel/next.js/issues/98344#issuecomment-5579645805
+*/
+  outputTerms.push({
+    ...inputTerm,
+    url:
+      process.env.NODE_ENV === "development"
+        ? encodeURIComponent(inputTerm.name)
+        : inputTerm.name,
+  });
 }
 
 export const getOutputTerms = () => outputTerms;

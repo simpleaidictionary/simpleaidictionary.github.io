@@ -15,7 +15,9 @@ export default async function TermPage({
   params: Promise<{ url: string }>;
 }) {
   const { url } = await params;
-  const outputTerm = getOutputTerm(url)!;
+  const outputTerm = getOutputTerm(
+    process.env.NODE_ENV === "production" ? decodeURIComponent(url) : url
+  )!;
 
   return (
     <>
