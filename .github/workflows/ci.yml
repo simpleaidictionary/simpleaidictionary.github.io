@@ -8,6 +8,8 @@ on:
 permissions:
   contents: read
 
+cache-mode: read
+
 jobs:
   format_lint:
     runs-on: ubuntu-latest
@@ -24,3 +26,14 @@ jobs:
         run: pnpm prettier --check .
       - name: check lint
         run: pnpm lint
+  try_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: pnpm/setup@v2.0.2
+        with:
+          runtime: node@24
+          version: ^12.0.0
+          cache: true
+      - run: |
+          pnpm build
