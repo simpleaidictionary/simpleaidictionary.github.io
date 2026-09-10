@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "format": "prettier --write ."
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "forlint": "eslint && pnpm format:check"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
