@@ -2,15 +2,20 @@ The general definition has been **approved**! 🥳
 
 Thank you for your work.
 
-Next, you can comment on this issue with a software defintion for the term. Please use the following format:
+Next, you can comment on this issue with a **software** defintion for the term. Please use the following format:
 
-### Software Defintion
+```text
+software
 
-- **Term Type**: ...
+type:
+...
 
-- **Software Definition**: ...
+definition:
+...
 
-- **Example**: ...
+example:
+...
+```
 
 ---
 

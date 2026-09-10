@@ -2,15 +2,20 @@ This term has been **approved** for the dictionary! 🥳
 
 Thank you for your work.
 
-Next, you can comment on this issue with a general definition for the term. Please use the following format:
+Next, you can comment on this issue with a **general** definition for the term. Please use the following format:
 
-### General Definition
+```text
+general
 
-- **Term type**: ...
+type:
+...
 
-- **General Definition**: ...
+definition:
+...
 
-- **Example**: ...
+example:
+...
+```
 
 ---
 
