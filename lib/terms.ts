@@ -144,6 +144,21 @@ const vibe_code: InputTerm = {
   },
 };
 
+const skill: InputTerm = {
+  name: "skill",
+  related_terms: ["skills", "agent skills"],
+  general: {
+    type: "extra information",
+    definition: `A text file, and possibly other programming files, that tell an AI model how to perform a specific task.`,
+    example: `Skills solve this by packaging procedural knowledge and company-, team-, and user-specific context into portable, version-controlled folders that agents load on demand (n.a, Agent Skills, n.d.).`,
+  },
+  software: {
+    type: "extra prompt",
+    definition: `A prompt, and possibly scripts and docs, that helps agents complete specific tasks.`,
+    example: `When you have a body of existing knowledge, you can feed it into an LLM and ask it to synthesize a skill (n.a., Agent Skills, n.d.).`,
+  },
+};
+
 const inputTerms: InputTerm[] = [
   agent,
   agi,
@@ -151,6 +166,7 @@ const inputTerms: InputTerm[] = [
   multi_agent,
   hallucinate,
   vibe_code,
+  skill,
 ];
 
 const outputTerms: OutputTerm[] = [];
