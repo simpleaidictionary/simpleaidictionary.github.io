@@ -35,11 +35,11 @@ If you want to add a new term to the dictionary, open up an issue using our hand
 
 [![new issue template](./public/readme/new-issue-template.png)](https://github.com/simpleaidictionary/simpleaidictionary.github.io/issues)
 
-This template aims to take a low amount of effort upfront, in case the definition is not approved.
-
-If the definition is approved, you will then be asked for a general and software definition, accordingly.
+This template aims to take a low amount of effort upfront, in case the definition is not approved. If the definition is approved, you will then be asked for a general and software definition, accordingly.
 
 This helps us open up the floor for discussion, before making a pull request.
+
+Please view: [#28](https://github.com/simpleaidictionary/simpleaidictionary.github.io/issues/28), for an example of how this works!
 
 ### Other Stuff
 
