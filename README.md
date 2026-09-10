@@ -31,7 +31,7 @@ If you want to suggest a word of the day, simply open up a pull request with an 
 
 ### Add a New Term
 
-If you want to add a new term to the dictionary, open up an issue using our handy, dandy `new issue` template.
+If you want to add a new term to the dictionary, open up an issue using our handy, dandy `new term` template.
 
 [![new issue template](./public/readme/new-issue-template.png)](https://github.com/simpleaidictionary/simpleaidictionary.github.io/issues)
 
