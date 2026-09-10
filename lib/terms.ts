@@ -178,6 +178,23 @@ const mcp: InputTerm = {
   },
 };
 
+const loop_engineering: InputTerm = {
+  name: "loop engineer",
+  related_terms: ["loop engineer", "loopcraft"],
+  general: {
+    type: "architecture",
+    definition: `Designing AI-powered apps that run on a "loop", where they continue to prompt themselves to complete a task.`,
+    example: ` AI leaders like Steipete, Boris, and Andrej have all arrived at the same conclusion: the potential in agents is in the loops you build around them (Runkle, LangChain, 2026).`,
+  },
+  software: {
+    type: "architecture",
+    definition:
+      " Running agents in a loop, where they continuously prompt themselves until they meet a task's expected outcomes.",
+    example:
+      " Instead of treating an AI tool as a one-shot code generator, loop engineering treats software work as an iterative system: define the goal, inspect the codebase, make a change, run validation, read the outcome, and decide what to do next (Kondrashov, Kilo, 2026).",
+  },
+};
+
 const inputTerms: InputTerm[] = [
   agent,
   agi,
@@ -187,6 +204,7 @@ const inputTerms: InputTerm[] = [
   vibe_code,
   skill,
   mcp,
+  loop_engineering,
 ];
 
 const outputTerms: OutputTerm[] = [];
