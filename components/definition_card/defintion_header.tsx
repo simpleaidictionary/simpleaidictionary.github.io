@@ -19,7 +19,7 @@ export function DefintionHeader({
           {outputTerm.name}
         </Link>
         <span className="ms-1 text-muted-foreground font-normal">
-          - {termType}
+          - {outputTerm[termType].type}
         </span>
       </CardTitle>
       <CardDescription className="capitalize">
