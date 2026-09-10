@@ -31,23 +31,15 @@ If you want to suggest a word of the day, simply open up a pull request with an 
 
 ### Add a New Term
 
-If you want to add a new term to the dictionary, open up an issue with the term in the title, and your suggested "General" and "Software" definition in the body of the issue.
+If you want to add a new term to the dictionary, open up an issue using our handy, dandy `new issue` template.
 
-Example Issue:
+[![new issue template](./public/readme/new-issue-template.png)](https://github.com/simpleaidictionary/simpleaidictionary.github.io/issues)
 
-```yml
-----------------------------------------
-| New Term: Vibe-coding                |
-|--------------------------------------|
-|                                      |
-| General definition: ....             |
-|                                      |
-| Software definition: ...             |
-|                                      |
-|--------------------------------------|
-```
+This template aims to take a low amount of effort upfront, in case the definition is not approved.
 
-This will help us open up the floor for discussion, before making a pull request.
+If the definition is approved, you will then be asked for a general and software definition, accordingly.
+
+This helps us open up the floor for discussion, before making a pull request.
 
 ### Other Stuff
 
