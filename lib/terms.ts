@@ -159,6 +159,25 @@ const skill: InputTerm = {
   },
 };
 
+const mcp: InputTerm = {
+  name: "MCP",
+  related_terms: ["model context protocol"],
+  general: {
+    type: "specification",
+    definition:
+      "A specification that standardizes how AI-powered apps can talk to servers and access additional data and tools.",
+    example:
+      "Just as USB-C provides a standardized way to connect electronic devices, MCP provides a standardized way to connect AI applications to external systems (n.a., Model Context Protocol, n.d.).",
+  },
+  software: {
+    type: "open standard",
+    definition:
+      "An open standard that specifies how AI agents can communicate with servers to obtain additional data or access tools.",
+    example:
+      "MCP reduces development time and complexity when building, or integrating with, an AI application or agent. (n.a., Model Context Protocol, n.d.).",
+  },
+};
+
 const inputTerms: InputTerm[] = [
   agent,
   agi,
@@ -167,6 +186,7 @@ const inputTerms: InputTerm[] = [
   hallucinate,
   vibe_code,
   skill,
+  mcp,
 ];
 
 const outputTerms: OutputTerm[] = [];
