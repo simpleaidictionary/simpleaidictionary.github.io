@@ -11,7 +11,7 @@ export function DefinitionContent({
   termType: TermType;
 }) {
   return (
-    <CardContent className="text-sm text-muted-foreground flex gap-2 flex-col text-center @md:text-left md:justify-start justify-center">
+    <CardContent className="text-muted-foreground flex gap-2 flex-col text-center @md:text-left md:justify-start justify-center">
       <p className="text-black">{outputTerm[termType].definition}</p>
       <DefinitionExample example={outputTerm[termType].example} />
     </CardContent>

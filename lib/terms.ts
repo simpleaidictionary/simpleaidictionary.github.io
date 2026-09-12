@@ -180,7 +180,7 @@ const mcp: InputTerm = {
 
 const loop_engineering: InputTerm = {
   name: "loop engineer",
-  related_terms: ["loop engineer", "loopcraft"],
+  related_terms: ["loop engineering", "loopcraft"],
   general: {
     type: "architecture",
     definition: `Designing AI-powered apps that run on a "loop", where they continue to prompt themselves to complete a task.`,

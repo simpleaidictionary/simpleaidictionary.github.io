@@ -13,7 +13,7 @@ export function DefinitionCard({
   termType: TermType;
 }) {
   return (
-    <BaseCard>
+    <BaseCard className="text-base">
       <div className="flex flex-col @md:flex-row items-center">
         <div
           className={clsx({

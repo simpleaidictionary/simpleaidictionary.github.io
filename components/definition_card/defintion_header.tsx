@@ -22,7 +22,7 @@ export function DefintionHeader({
           - {outputTerm[termType].type}
         </span>
       </CardTitle>
-      <CardDescription className="capitalize">
+      <CardDescription className="capitalize ">
         Related: {outputTerm.related_terms.join(", ")}
       </CardDescription>
     </CardHeader>

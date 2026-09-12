@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <main className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center mt-8">
         <article className="grow">
-          <h1 className="px-8 text-2xl text-primary mb-2 text-center font-playfair-display ">
+          <h1 className="px-8 text-2xl text-primary mb-3 text-center font-playfair-display ">
             Today&apos;s &nbsp;
             <span>Buzzword</span>
           </h1>
@@ -20,12 +20,12 @@ export default function Home() {
             termType="general"
           />
         </article>
-        <article className="min-w-fit flex items-center flex-col">
+        <article className=" flex items-center flex-col">
           <h1 className="text-center px-4 text-2xl text-primary mb-2 font-playfair-display">
             Discover
           </h1>
-          <Card className="border border-border p-4 bg-secondary px-5 basis-48 overflow-scroll">
-            <ul className="list-none grid grid-cols-2 grid-flow-row px-2 gap-2 gap-x-8 ">
+          <Card className="border border-border p-4 bg-secondary px-5 basis-72 overflow-scroll">
+            <ul className="list-none grid grid-cols-1 grid-flow-row px-2 gap-2 gap-x-8 text-base">
               {getOutputTerms()
                 .slice(0, 12)
                 .map((term) => (
