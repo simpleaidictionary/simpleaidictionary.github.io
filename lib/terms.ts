@@ -195,6 +195,23 @@ const loop_engineering: InputTerm = {
   },
 };
 
+const doomer: InputTerm = {
+  name: "Doomer",
+  related_terms: ["ai doomer", "ai doomerism", "ai doomsayers"],
+  general: {
+    type: "Group of People",
+    definition:
+      "A group of people who believe AI can cause the extinction of humans.",
+    example: ` Along with other AI doomers, they have repeatedly warned, with rather dramatic flourish, that bots could one day go rogue—with apocalyptic consequences (Wong, The Atlantic, 2025).`,
+  },
+  software: {
+    type: "Group of People",
+    definition:
+      " A group of people who believe that, especially with the advent of recursive AI, agents can escape their harness and cause human extinction.",
+    example: `The “doomer” outcomes rely on a specific set of circumstances, including recursive self-improvement, a term for when tech companies use AI to automate the development of newer models (Kubinec, The Dispatch, 2026).`,
+  },
+};
+
 const inputTerms: InputTerm[] = [
   agent,
   agi,
@@ -205,6 +222,7 @@ const inputTerms: InputTerm[] = [
   skill,
   mcp,
   loop_engineering,
+  doomer,
 ];
 
 const outputTerms: OutputTerm[] = [];
