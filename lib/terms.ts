@@ -212,6 +212,21 @@ const doomer: InputTerm = {
   },
 };
 
+const rsi: InputTerm = {
+  name: "RSI",
+  related_terms: ["recursive self-improvement", "recursive AI"],
+  general: {
+    type: "behavior",
+    definition: `An AI system that continuously improves itself.`,
+    example: `Rather than a particular learning algorithm or a one-off optimization result [14–16], RSI aims to improve both task performance and the mechanisms through which later improvements are discovered and implemented (Duan et al., arxiv, 2026).`,
+  },
+  software: {
+    type: "system classification",
+    definition:
+      " An AI system that improves its own capabilities, allowing it to further improve its own capabilities.",
+    example: `RSI requires changes to persist across tasks or improvement rounds, but persistence alone does not guarantee sustained gain (Duan et al., arxiv, 2026).`,
+  },
+};
 const inputTerms: InputTerm[] = [
   agent,
   agi,
@@ -223,6 +238,7 @@ const inputTerms: InputTerm[] = [
   mcp,
   loop_engineering,
   doomer,
+  rsi,
 ];
 
 const outputTerms: OutputTerm[] = [];
